@@ -9,6 +9,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { ContentHeaderComponent } from './layout/content-header/content-header.component';
 import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.component';
 import { Dashboardv1Component } from './components/dashboardv1/dashboardv1.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { Dashboardv1Component } from './components/dashboardv1/dashboardv1.compo
     NavbarComponent,
     ContentHeaderComponent,
     RightSidebarComponent,
-    Dashboardv1Component
+    Dashboardv1Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
