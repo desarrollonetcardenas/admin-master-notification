@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { ContentHeaderComponent } from './layout/content-header/content-header.c
 import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.component';
 import { Dashboardv1Component } from './components/dashboardv1/dashboardv1.component';
 import { LoginComponent } from './login/login.component';
+import { NuevaNotificacionComponent } from './notification/nueva-notificacion/nueva-notificacion.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { LoginComponent } from './login/login.component';
     ContentHeaderComponent,
     RightSidebarComponent,
     Dashboardv1Component,
-    LoginComponent
+    LoginComponent,
+    NuevaNotificacionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

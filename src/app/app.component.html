@@ -1,47 +1,50 @@
-<body class="hold-transition sidebar-mini layout-fixed">
-  <div class="wrapper">
-    <!-- Navbar -->
-    <app-navbar></app-navbar>
-    <!-- /.navbar -->
-  
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+<div class="wrapper">
+  <!-- Navbar -->
+  <app-navbar></app-navbar>
+  <!-- /.navbar -->
 
-      <!-- Brand Logo -->
-      <a href="index3.html" class="brand-link">
-        <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-             style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
-      </a>
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
-      <!--Side Bar-->
-      <app-sidebar></app-sidebar>
-      <!--Side Bar-->
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
 
-    </aside>
-  
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <app-content-header></app-content-header>
-      <!-- /.content-header -->
-  
-      <!-- Main content -->
-      <section class="content">
-        <router-outlet></router-outlet>
-      </section>
-      <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
+    <!--Side Bar-->
+    <app-sidebar></app-sidebar>
+    <!--Side Bar-->
 
-    <!--Footer-->
-    <app-footer></app-footer>
-    <!--Footer-->
+  </aside>
 
-    <!-- Control Sidebar -->
-    <app-right-sidebar></app-right-sidebar>
-    <!-- /.control-sidebar -->
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <app-content-header></app-content-header>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <router-outlet></router-outlet>
+    </section>
+    <!-- /.content -->
   </div>
-  <!-- ./wrapper -->
-  </body>
-  
+  <!-- /.content-wrapper -->
+
+  <!--Footer-->
+  <app-footer></app-footer>
+  <!--Footer-->
+
+  <!-- Control Sidebar -->
+  <app-right-sidebar></app-right-sidebar>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
