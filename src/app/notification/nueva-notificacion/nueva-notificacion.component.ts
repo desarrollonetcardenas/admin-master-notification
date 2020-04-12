@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 export class NuevaNotificacionComponent implements OnInit {
 
   success: boolean;
+  IsContinuos: boolean;
 
-  constructor() { }
+  constructor() { 
+    this.IsContinuos = true;
+  }
 
   ngOnInit(): void {
   }

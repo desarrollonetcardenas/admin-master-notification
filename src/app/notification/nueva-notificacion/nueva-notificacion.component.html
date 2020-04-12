@@ -24,7 +24,7 @@
                                 <option selected="selected">Warning</option>
                                 <option>Error</option>
                                 <option>Informativa</option>
-                              </select>
+                            </select>
                         </div>
                         <!-- /.form-group -->
                     </div>
@@ -40,15 +40,30 @@
                                     <option value="WY">Jose</option>
                                     <option value="WY">Maria</option>
                                     <option value="WY">Jhon</option>
-                                  </select>
+                                </select>
                             </div>
                         </div>
                         <!-- /.form-group -->
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="switch">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" [(ngModel)]="IsContinuos" class="custom-control-input"
+                                        id="customSwitches">
+                                    <label class="custom-control-label" for="customSwitches">Is continuos
+                                        message</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
+                <label for="">Write message</label>
             </div>
         </div>
         <!-- /.card -->
@@ -77,38 +92,128 @@
                                 <textarea class="textarea" placeholder="Place some text here"
                                     style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                             </div>
-                            <p class="text-sm mb-0">&nbsp;</p>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <label for="">Message</label>
-                        <h3 class="card-title">
-                            <label for="">Is continuos message</label>
-                            <input type="checkbox" checked data-toggle="toggle">
-                        </h3>
+                        <div class="card-footer">&nbsp;</div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <div class="row">
+            <div class="col-md-6 col-md-12">
+                <div class="card card-success">
+                    <div class="card card-header">
+                        <h3 class="card-tittle">Input Date Mask</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                    class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="card card-body">
+                        <div class="form-group">
+                            <label for="">Date Mask:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control"
+                                    data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">US Phone mask:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                    <input type="text" class="form-control"
+                                        data-inputmask-alias='"mask": "(999) 999-9999"' data-mask>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Intl US phone mask</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                </div>
+                                <input type="text" class="form-control"
+                                    data-inputmask="'mask': ['999-999-9999 [x9999]', '+099 00 00 0000[9'-9999]"
+                                    data-mask>
+                            </div>
+                        </div>
+                        <!--IP Mask-->
+                        <div class="form-group">
+                            <label for="">IP Mask</label>
+                            <div class="input-group">
+                                <div class="input group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-laptop"></i></span>
+                                </div>
+                                <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <label for=""></label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!-- /.container-fluid -->
 </section>
 <!-- /.content -->
+<div class="card card-info">
+    <div class="card-header">
+        <h3 class="card-title">Color & Time Picker</h3>
+    </div>
+    <div class="card-body">
+        <div class="form-group"><label for="">Color Picker:</label></div>
+        <input type="text" class="form-control my-colorpicker1">
+        <div class="form-group">
+            <label for="">Color picker withd addon:</label>
+            <div class="input-group my-colorpicker2">
+                <input type="text" class="form-control">
 
-<!-- jQuery -->
-<script src="../../../assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- Select2 -->
-<script src="../../../assets/plugins/select2/js/select2.full.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../../assets/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../../assets/dist/js/demo.js"></script>
-<!-- Summernote -->
-<script src="../../../assets/plugins/summernote/summernote-bs4.min.js"></script>
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="fas fa-square"></i></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <label for="">color picker</label>
+    </div>
+</div>
+
+<div class="card card-info">
+    <div class="card-header">
+        <h3 class="card-title">Select Periodicity</h3>
+    </div>
+    <div class="card-body">
+        <div class="form-group"><label for="">Select Periodicity</label></div>
+        <input type="text" class="form-control periodicity">
+        <div class="form-group">
+            <label for="">periodicity</label>
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-calendar-plus"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">&nbsp;</div>
+</div>
+
+<!--Bootstrap switch-->
+<div class="card card-secondary">
+    <div class="card-header">
+        <h3 class="card-title">Switch</h3>
+    </div>
+    <div class="card-body">
+        <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
+        <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success">
+    </div>
+</div>
 
 <script>
     $(function () {
@@ -121,66 +226,66 @@
         });
 
         //Initialize Select2 Elements
-        // $('.select2bs4').select2({
-            // theme: 'bootstrap4'
-        // })
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
 
         //Datemask dd/mm/yyyy
-        // $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+        $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
         //Datemask2 mm/dd/yyyy
-        // $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+        $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
         //Money Euro
-        // $('[data-mask]').inputmask()
+        $('[data-mask]').inputmask()
 
         //Date range picker
-        // $('#reservation').daterangepicker()
+        $('#reservation').daterangepicker()
         //Date range picker with time picker
-        // $('#reservationtime').daterangepicker({
-        // timePicker: true,
-        // timePickerIncrement: 30,
-        // locale: {
-        // format: 'MM/DD/YYYY hh:mm A'
-        // }
-        // })
+        $('#reservationtime').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+                format: 'MM/DD/YYYY hh:mm A'
+            }
+        })
         //Date range as a button
-        // $('#daterange-btn').daterangepicker(
-        // {
-        // ranges: {
-        // 'Today': [moment(), moment()],
-        // 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-        // 'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-        // 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-        // 'This Month': [moment().startOf('month'), moment().endOf('month')],
-        // 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        // },
-        // startDate: moment().subtract(29, 'days'),
-        // endDate: moment()
-        // },
-        // function (start, end) {
-        // $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-        // }
-        // )
+        $('#daterange-btn').daterangepicker(
+            {
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment()
+            },
+            function (start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+            }
+        )
 
         //Timepicker
-        // $('#timepicker').datetimepicker({
-        // format: 'LT'
-        // })
+        $('#timepicker').datetimepicker({
+            format: 'LT'
+        })
 
         //Bootstrap Duallistbox
-        // $('.duallistbox').bootstrapDualListbox()
+        $('.duallistbox').bootstrapDualListbox()
 
         //Colorpicker
-        // $('.my-colorpicker1').colorpicker()
+        $('.my-colorpicker1').colorpicker()
         //color picker with addon
-        // $('.my-colorpicker2').colorpicker()
+        $('.my-colorpicker2').colorpicker()
 
-        // $('.my-colorpicker2').on('colorpickerChange', function (event) {
-        // $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
-        // });
+        $('.my-colorpicker2').on('colorpickerChange', function (event) {
+            $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+        });
 
-        // $("input[data-bootstrap-switch]").each(function () {
-        // $(this).bootstrapSwitch('state', $(this).prop('checked'));
-        // });
+        $("input[data-bootstrap-switch]").each(function () {
+            $(this).bootstrapSwitch('state', $(this).prop('checked'));
+        });
 
     })
 </script>
